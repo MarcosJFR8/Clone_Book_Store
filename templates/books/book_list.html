@@ -2,6 +2,14 @@
 
 {% block content %}
     {% for book in book_list %}
-        <a href="">{{ book.title }}</a>
+         <div class="col-md-4 mb-4"> 
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title">{{ book.title }}</h3>
+                    <p class="card-text">Author: {{ book.author }}</p>
+                    <p class="card-text">Price: ${{ book.price }}</p>
+                </div>
+            </div>
+         </div>     
     {% endfor %}
 {% endblock content %}
