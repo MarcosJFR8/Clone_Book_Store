@@ -5,13 +5,14 @@
          <div class="col-md-4 mb-4"> 
             <div class="card h-100">
                 <div class="card-body">
-                    <h3 class="card-title">{{ book.title }}</h3>
-                    <p class="card-text">Author: {{ book.author }}</p>
-                    <p class="card-text">Price: ${{ book.price }}</p>
+                    <h3 class="card-title">
+                        <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
+                    </h3>
+                    <!--<p class="card-text">Author: {{ book.author }}</p>-->
+                    <!--<p class="card-text">Price: ${{ book.price }}</p>-->
                 </div>
             </div>
          </div>
          <!-- <img src="images/Libros_2.jpg" class="img-thumbnail" alt="Prueba pajua"> -->
-    {% endfor %}
-        <img src="static 'images/Guerra.jpeg'" alt="Tonoto">
+    {% endfor %}    
 {% endblock content %}
